@@ -13,6 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+<<<<<<< HEAD
 
     <style name="Theme.AppCompat" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="backgroundTint">@color/pink</item>
@@ -28,4 +29,21 @@
         <item name="android:textColor"  >@color/pink</item>
 
     </style>
+=======
+    <style name="MyEditText" parent="Widget.AppCompat.EditText">
+<!--        <item name="colorControlNormal">@color/black</item>-->
+        <item name="colorControlActivated">#818080</item>
+        <item name="backgroundColor">@color/white</item>
+
+    </style>
+<!--    <style name="Theme.AppCompat" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--&lt;!&ndash;        <item name="android:background">@drawable/textbackground</item>&ndash;&gt;-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--    </style>-->
+<!--    <style name="whitebg" parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+<!--        <item name="android:background" >@drawable/bg_white</item>-->
+<!--        <item name="android:textColor">@color/pink</item>-->
+<!--    </style>-->
+
+>>>>>>> 5bd2c2c (Initial commit)
 </resources>

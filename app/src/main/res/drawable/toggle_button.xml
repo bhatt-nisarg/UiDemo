@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <item android:state_checked="true" >
         <color android:color="@color/pink"/>
         
@@ -7,6 +8,13 @@
     <item android:state_checked="false" >
         <color android:color="@color/white"/>
 
+=======
+    <item>
+        <shape  android:shape="rectangle" >
+            <solid android:color="@color/pink"/>
+            <corners android:topLeftRadius="40dp" android:topRightRadius="40dp" android:bottomLeftRadius="40dp" android:bottomRightRadius="40dp"/>
+        </shape>
+>>>>>>> 5bd2c2c (Initial commit)
     </item>
 
 

@@ -4,4 +4,10 @@
     <string name="submit">Don\'t Have An Account? Sign UP</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+<<<<<<< HEAD
+=======
+    <string name="password">password</string>
+    <string name="otp">OTP</string>
+    <string name="email">Email</string>
+>>>>>>> 5bd2c2c (Initial commit)
 </resources>
