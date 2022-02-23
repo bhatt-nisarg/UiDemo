@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8">
+        <ImageButton
+            android:id="@+id/back_arrow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/back_arrow" />
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/back_arrow"
+            android:text="Log In"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:background="@drawable/ui_background"
+        android:baselineAligned="false"
+        android:elevation="5dp">
+
+        <EditText
+            android:id="@+id/editemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="35dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editemail"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
+        <RadioGroup
+            android:id="@+id/linear1"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/activity_main_button1"
+                android:layout_below="@id/password"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="Password"
+                android:gravity="center"
+                app:cornerRadius="20dp"
+                style="@style/toggleText" />
+            <TextView
+                android:layout_below="@id/password"
+                android:id="@+id/activity_main_button2"
+                android:gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="OTP"
+                app:cornerRadius="20dp"
+                style="@style/toggleText" />
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/submit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/linear1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/buttonbg"
+            android:src="@drawable/btnsubmit" />
+
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submit"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/submit"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
