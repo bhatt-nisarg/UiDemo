@@ -1,17 +1,8 @@
 package com.example.uidemo;
-<<<<<<< HEAD
 
 import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.button.MaterialButtonToggleGroup;
-
-public class MainActivity extends AppCompatActivity {
-=======
-import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -21,8 +12,13 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.button.MaterialButtonToggleGroup;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView pass,otp,timer,send;
@@ -33,18 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
 
-
->>>>>>> 5bd2c2c (Initial commit)
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
+
         setContentView(R.layout.activity_main);
 
 
-    }
-=======
+
 
         setContentView(R.layout.activity_main);
          pass = findViewById(R.id.password_select);
@@ -137,5 +129,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
->>>>>>> 5bd2c2c (Initial commit)
+
 }

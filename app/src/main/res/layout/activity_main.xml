@@ -12,28 +12,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.8">
+
         <ImageButton
             android:id="@+id/back_arrow"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/back_arrow" />
+
         <androidx.appcompat.widget.AppCompatCheckedTextView
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
             android:layout_below="@id/back_arrow"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             android:text="Log In"
             android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="normal" />
     </RelativeLayout>
-<<<<<<< HEAD
-=======
 
->>>>>>> 5bd2c2c (Initial commit)
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -43,88 +42,29 @@
         android:elevation="5dp">
 
         <EditText
-<<<<<<< HEAD
             android:id="@+id/editemail"
+            style="@style/MyEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="35dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="35dp"
             android:hint="Email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textCursorDrawable="@color/grey" />
 
         <EditText
+            style="@style/MyEditText"
             android:id="@+id/password"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/editemail"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
             android:hint="Password"
-            android:inputType="textPassword" />
-        <RadioGroup
-            android:id="@+id/linear1"
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/password"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_centerHorizontal="true">
-            <TextView
-                android:id="@+id/activity_main_button1"
-                android:layout_below="@id/password"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="Password"
-                android:gravity="center"
-                app:cornerRadius="20dp"
-                style="@style/toggleText" />
-            <TextView
-                android:layout_below="@id/password"
-                android:id="@+id/activity_main_button2"
-                android:gravity="center"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:text="OTP"
-                app:cornerRadius="20dp"
-                style="@style/toggleText" />
-        </RadioGroup>
-
-        <ImageButton
-            android:id="@+id/submit"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_below="@id/linear1"
-=======
-            android:textCursorDrawable="@color/black"
-            style="@style/MyEditText"
-            android:id="@+id/editemail"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="35dp"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:backgroundTint="#6E6D6D"
-
-             />
-
-        <EditText
-            android:textCursorDrawable="@color/black"
-            style="@style/MyEditText"
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/editemail"
-            android:layout_marginLeft="35dp"
-            android:layout_marginRight="35dp"
-            android:hint="@string/password"
             android:inputType="textPassword"
-            android:backgroundTint="#6E6D6D"
-
-            />
+            android:textCursorDrawable="@color/grey" />
       <TextView
           android:layout_width="60dp"
           android:gravity="center"
@@ -138,15 +78,16 @@
           android:textColor="@color/white"
           android:layout_marginLeft="280dp"
           android:layout_marginTop="10dp"/>
+
         <TextView
             android:id="@+id/timeertext"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_below="@id/password"
-            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
-            android:textSize="20sp"
-            android:gravity="center"/>
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:id="@+id/login_type_change"
@@ -187,16 +128,16 @@
                 android:textSize="16sp" />
 
         </LinearLayout>
+
         <ImageButton
-            android:contentDescription=""
             android:id="@+id/submit"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_below="@id/login_type_change"
->>>>>>> 5bd2c2c (Initial commit)
             android:layout_centerHorizontal="true"
             android:layout_marginTop="100dp"
             android:background="@drawable/buttonbg"
+            android:contentDescription=""
             android:src="@drawable/btnsubmit" />
 
         <TextView
@@ -209,11 +150,9 @@
             android:gravity="center"
             android:text="@string/submit"
             android:textColor="@color/black"
-<<<<<<< HEAD
             android:textSize="25sp" />
-=======
-            android:textSize="20sp" />
->>>>>>> 5bd2c2c (Initial commit)
+
+
 
     </RelativeLayout>
 
