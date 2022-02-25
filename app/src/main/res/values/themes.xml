@@ -32,7 +32,7 @@
 
     <style name="MyEditText" parent="Widget.AppCompat.EditText">
 <!--        <item name="colorControlNormal">@color/black</item>-->
-        <item name="backgroundTint">@color/grey</item>
+        <item name="backgroundTint">#838282</item>
         <item name="colorControlActivated">#818080</item>
         <item name="backgroundColor">@color/white</item>
 

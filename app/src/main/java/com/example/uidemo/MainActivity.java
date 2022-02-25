@@ -35,9 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
-
-
-
         setContentView(R.layout.activity_main);
          pass = findViewById(R.id.password_select);
          otp = findViewById(R.id.otp_select);
