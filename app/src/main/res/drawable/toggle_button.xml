@@ -3,7 +3,7 @@
 <<<<<<< HEAD
     <item android:state_checked="true" >
         <color android:color="@color/pink"/>
-        
+
     </item>
     <item android:state_checked="false" >
         <color android:color="@color/white"/>
