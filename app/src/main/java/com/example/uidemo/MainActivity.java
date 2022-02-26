@@ -4,9 +4,13 @@ import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView pass,otp,timer,send;
     EditText editpass,editemail;
     boolean setotp;
+    SQLiteDatabaseHandler db;
     boolean timerOn = true;
     ImageButton submitdata;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
@@ -35,14 +40,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main);
 
-        setContentView(R.layout.activity_main);
-         pass = findViewById(R.id.password_select);
-         otp = findViewById(R.id.otp_select);
-         timer = findViewById(R.id.timeertext);
-         send = findViewById(R.id.send);
-         editemail = findViewById(R.id.editemail);
-         editpass = findViewById(R.id.password);
-         submitdata = findViewById(R.id.submit);
+        db = new SQLiteDatabaseHandler(this);
+//       long a= db.addUser_info();
+        db.insertdata();
+//       Log.d("sdsdsada", String.valueOf(a));
+         pass = (TextView) findViewById(R.id.password_select);
+         otp = (TextView) findViewById(R.id.otp_select);
+         timer = (TextView)findViewById(R.id.timeertext);
+         send = (TextView)findViewById(R.id.send);
+         editemail = (EditText) findViewById(R.id.editemail);
+         editpass = (EditText)findViewById(R.id.password);
+         submitdata = (ImageButton) findViewById(R.id.submit);
          submitdata.setOnClickListener(this);
          pass.setOnClickListener(this);
          otp.setOnClickListener(this);
@@ -50,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          send.setVisibility(View.INVISIBLE);
 
          send.setOnClickListener(this);
+
     }
 
     @SuppressLint("ResourceType")
@@ -123,6 +132,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (editpass.length() != 6 && setotp){
                     Toast.makeText(getApplicationContext(),"Enter valid OTP",Toast.LENGTH_SHORT).show();
                 }
+                String email =editemail.getText().toString();
+                String password = editpass.getText().toString();
+               /* Log.d("sdsdsd",email+"=="+password);
+                Boolean isLogin = db.checkusernamepassword(email,password);*/
+                Cursor cursor = db.fetch();
+                cursor.moveToFirst();
+                Log.d("sdssd",cursor.getString(0)+"==="+cursor.getString(1));
+
+                if (email.equals(cursor.getString(0)) && password.equals(cursor.getString(1))){
+                    Toast.makeText(getApplicationContext(),"Login Succesful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this,Homepage.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Login Failed",Toast.LENGTH_SHORT).show();
+                }
+
         }
     }
 
